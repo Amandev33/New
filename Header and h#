@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAGs de h1 a h6</title>
+</head>
+
+<body>
+    
+    <section>
+        <h1>H1 H2 e H3</h1>
+    </section>
+    <h1></h1><!--H$*6, aciona todas as tags abaixo-->
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+    <h1>
+        título principal h1
+        <h2>
+            título principal h2, só depois de um h1
+            <h3>
+                H3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum voluptate rem provident accusamus dolores voluptas, laboriosam veniam minus cupiditate id magni minima tempora quasi sint ipsum nisi iure itaque!
+                <h4>
+                   terceiro subtítulo h4
+                    <h5>
+                        olha só h5, quarto subtitulo
+                        <h6> NÃO CREIO KKK h6 sexto título mais importante </h6>
+                    </h5>
+                </h4>
+            </h3>
+        </h2>
+        
+        <h2> outro h2</h2>
+    </h1>
+</body>
+</html>
