@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refazendo exercícios</title>
+    <style>
+        .botao {
+            border: none;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 10px 25px; 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12;
+            text-decoration: rgb(205, 255, 244);
+            ;
+        }
+             
+    </style>
+        
+</head>
+<body> irmã da tag HEAD
+    
+    <ul>
+        <li data-id="1" data-email="am.dev@tutanota.com">Amanda tutanota</li>
+        <li data-id="2" data-email="amandakopps@gmail.com">Amanda gmail</li>
+    </ul>
+    <script>
+    document.querySelectorAll('li').forEach(liEL => {
+        console.log(liEL.dataset);          
+        });
+    </script>
+    <header> header Filho da tag BODY
+        <h1> H1 é descendente</h1>
+        <nav>NAV é descendente</nav>
+    </header>
+    <p dir="ltr">parágrafo ou seja 'p' Filho da tag BODY</p>
+    <section> SECTION elemento de bloco
+        <div> DIV elemento de bloco</div>
+        <p>
+            <button type="button" class="botao">OK</button>
+            <a target="blank"  href="https://ead.recode.org.br/login/index.php" class="botao">Clique aqui</a>
+        [target blank é para abrir em nova guia]
+        </p>
+        </section>
+    <footer>  
+        <p>
+            <button type="button"accesskey="s">Sim</button> Foco no botão alt+S
+        </p>
+        <P>
+            <button type="button"accesskey="n">Nada</button> Foco no botão alt+N </p>   
+            
+            <p contenteditable="true">Esse conteúdo fica editável no site, porém para que ele seja salvo, precisa de um backend, java para se manter o texto que o usuário quiser, até melhor que fosse com login.</p>
+        </footer>
+        
+</html>
+
+</body>

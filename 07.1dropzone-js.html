@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropZoneJS</title>
+    <style>
+        #c1 {
+            width: 120px;
+            height: 100px;
+            background-color:darkmagenta;
+            border-radius: 7px;
+        }
+        #c2 {
+            width: 120px;
+            height: 100px;
+            background-color:yellowgreen;
+            border-radius: 7px;
+        }
+        
+        #d1 {
+            width: 200px;
+            height: 200px;
+            border: crimson 5px solid;
+            border-radius: 7px;
+        }
+        #d2 {
+            width: 200px;
+            height: 200px;
+            border: yellowgreen 5px solid;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="c1" class="box" draggable="true">Caixa1</div>
+    <div id="c2" class="box" draggable="true">Caixa2</div>
+    
+    <div id="d1" class="drop" dropzone="copy">Sem texto</div>
+    <div id="d2" class="drop" dropzone="copy"></div>
+    
+
+    <script>
+        const box = document.querySelectorAll('.box');
+        const dropzone = document.querySelector('.drop');
+    
+        box.forEach(boxEl => {
+            boxEl.addEventListener('dragstart', e => {
+                e.dataTransfer.setData('Text', e.target.id);
+                console.log(e.target.id);
+            });
+        });
+        
+        dropzone.addEventListener('dragover', e => {
+            e.preventDefault();
+        });
+    
+        dropzone.addEventListener('drop', e => {
+            
+            const id = e.dataTransfer.getData('Text');
+            const elemnt = document.getElementById(id);
+    
+            e.target.appendChild(elemnt);
+        });
+
+    </script>
+</body>
+</html>
